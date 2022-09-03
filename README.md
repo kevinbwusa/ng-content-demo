@@ -1,4 +1,6 @@
-# CarsDemo
+# ng-content-demo
+
+See: https://medium.com/@arpitmalaiya/3-ways-to-include-component-in-angular-application-dcbd4d0f4c1a
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
 
