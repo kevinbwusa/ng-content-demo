@@ -8,6 +8,11 @@ import {JokeComponent} from '../joke/joke.component';
   styleUrls: ['./joke-list.component.scss']
 })
 export class JokeListComponent implements OnInit, AfterContentInit, AfterViewInit {
+  @ViewChild(JokeComponent) jokeViewChild: JokeComponent | undefined;
+  @ViewChildren(JokeComponent) jokeViewChildren: QueryList<JokeComponent> | undefined;
+  @ViewChild("header") headerEl: ElementRef | undefined;
+  @ContentChild(JokeComponent) jokeContentChild: JokeComponent | undefined;
+
   jokes: Joke[] = [
     new Joke(
       "What did the cheese say when it looked in the mirror",
@@ -18,11 +23,6 @@ export class JokeListComponent implements OnInit, AfterContentInit, AfterViewIni
       "Mask-a-pony (Mascarpone)"
     )
   ];
-
-  @ViewChild(JokeComponent) jokeViewChild: JokeComponent | undefined;
-  @ViewChildren(JokeComponent) jokeViewChildren: QueryList<JokeComponent> | undefined;
-  @ViewChild("header") headerEl: ElementRef | undefined;
-  @ContentChild(JokeComponent) jokeContentChild: JokeComponent | undefined;
 
   constructor() {
     console.log(`new - jokeViewChild is ${this.jokeViewChild}`);

@@ -7,7 +7,6 @@ import {Joke} from '../common/joke';
   styleUrls: ['./joke.component.scss']
 })
 export class JokeComponent implements OnInit {
-
   @Input("joke") data: Joke | undefined;
 
   constructor() { }
